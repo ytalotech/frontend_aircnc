@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+/* zerar todo os estilos do projeto */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  /* ajudar a gente a fazer espaçamentos ... */
+  box-sizing: border-box;
+}
+
+/* fazer com que nosso fundo ocupe a tela toda. backgroud na tela toda*/
+html, body, #root {
+  min-height: 100%;
+}
+
+body{
+  background: #000 url('./assets//background.jpg') no-repeat;
+  background-size: cover;
+  /* deixa a nossa fotne bem mais detalhada */
+  -webkit-font-smoothing: antialiased !important;
+}
+
+/* por padrão os input e os button não erdão as fotnes do body eles tem uma fonte propria */
+body, input, button{
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.container{
+  /* na direita e na esquerda irei deixar auto, ai isso irá deixar horizontalmente centralizado */
+  margin: 80px auto 0;
+  /* se tiver mais de 450 ele ira ficar com 450 */
+  max-width: 450px;
+  /* se tiver menos de 450 irá ocupar a tela toda */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  width: 100%;
+  background: #FFF;
+  margin-top: 50px;
+  border-radius: 4px;
+  padding: 30px;
+}
+
+/* irei estilizar o primeiro p que vem nele */
+.content > p {
+  font-size: 22px;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+
+.content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.content form label {
+  font-size: 14px;
+  color: #444;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.content form input {
+  margin-bottom: 20px;
+  border:  1px solid #ddd;
+  border-radius: 2px;
+  height: 45px;
+  /* para colocar só nas laterais */
+  padding: 0 15px;
+  font-size: 16px;
+}
+
+.content button.btn {
+  border: 0;
+  border-radius: 2px;
+  width: 100%;
+  height: 42px;
+  padding: 0 20px;
+  font-size:  16px;
+  font-weight: bold;
+  background: #f05a5b;
+  color: #fff;
+  cursor: pointer;
+}
+
+.content button.btn:hover {
+  background: #e14f50;
+}
